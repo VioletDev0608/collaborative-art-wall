@@ -1,0 +1,29 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Art Wall</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Collaborative Art Wall</h1>
+        <div class="toolbar">
+            <input type="color" id="colorPicker" value="#000000">
+            <input type="range" id="brushSize" min="1" max="50" value="5">
+            <button id="clearCanvas">Clear Canvas</button>
+        </div>
+        <canvas id="canvas" width="800" height="600"></canvas>
+        <div id="colorPalette" style="margin-top: 10px; display: flex; flex-wrap: wrap; gap: 5px;">
+    <!-- Colors will be added by JS -->
+        </div>
+        <div class="users">
+            <span id="userCount">Users online: 1</span>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
